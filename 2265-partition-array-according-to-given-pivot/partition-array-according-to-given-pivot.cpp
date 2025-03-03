@@ -10,8 +10,7 @@ public:
             if(nums[i]==pivot)
             c++;       
          }
-         while(c--)
-         ans.push_back(pivot);
+         ans.resize(ans.size()+c,pivot);
          for(int i=0;i<nums.size();i++)
         {
             if(nums[i]>pivot)
