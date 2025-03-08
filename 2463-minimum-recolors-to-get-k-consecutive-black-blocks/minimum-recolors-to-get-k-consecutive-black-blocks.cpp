@@ -10,7 +10,7 @@ public:
                 if(blocks[j]=='B')
                 c++;
             }
-            cout<<c<<" ";
+            // cout<<c<<" ";
             m=min(m,k-c);
         }
         return m;
