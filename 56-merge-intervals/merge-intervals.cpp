@@ -9,7 +9,7 @@ public:
         {
             int a=intervals[i][0];
             int b=intervals[i][1];
-            if(a==last+1||a>last+1)
+            if(a>=last+1)
             {
                
                 res.push_back({first,last});
