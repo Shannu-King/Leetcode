@@ -23,7 +23,7 @@ int sums(vector<int>arr)
 }
 void dfs(TreeNode* root, vector<int>ans,int targetSum,vector<vector<int>>&res)
 {
-       cout<<"Hello"<<" ";
+    //    cout<<"Hello"<<" ";
     if(root==nullptr)
     return;
     ans.push_back(root->val);
