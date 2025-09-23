@@ -11,8 +11,7 @@ public:
             {
                 if(s!="")
                 res1.push_back(stoi(s));
-                else
-                res1.push_back(0);
+             
                 s="";
 
             }
