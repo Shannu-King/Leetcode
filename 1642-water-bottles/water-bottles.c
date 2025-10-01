@@ -1,6 +1,6 @@
 int numWaterBottles(int a, int e) {
     int sum=a;
-    int bot=a;
+    int bot=0;
     while(a>=e)
     {
         bot=a%e;
@@ -8,7 +8,7 @@ int numWaterBottles(int a, int e) {
         
          sum=sum+a;
         a=a+bot;
-        bot=0;
+      
        
 
     }
