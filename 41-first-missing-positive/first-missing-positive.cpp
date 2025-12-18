@@ -5,7 +5,7 @@ public:
         int c=1;
         for(int i=0;i<nums.size();i++)
         {
-            if(nums[i]>0&&nums[i]>c)
+            if(nums[i]>c)
             return c;
             else if(nums[i]==c)
             c++;
