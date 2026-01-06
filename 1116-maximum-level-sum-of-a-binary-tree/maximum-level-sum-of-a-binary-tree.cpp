@@ -12,49 +12,35 @@
 class Solution {
 public:
     int maxLevelSum(TreeNode* root) {
-         queue<pair<long long int,TreeNode *>>q;
-        q.push({1,root});
-        vector<pair<long long int,TreeNode *>>v;
-        while(!q.empty())
-        {
-            TreeNode *m=q.front().second;
-            int n=q.front().first;
-            v.push_back(q.front());
-            q.pop();
-            if(m->left!=NULL)
-            q.push({n+1,m->left});
-            if(m->right!=NULL)
-            q.push({n+1,m->right});
-        }
-        //int w=root->val;
-        sort(v.begin(),v.end());
-        long long s=0;
-        long long maxx=INT_MIN;
+         queue<TreeNode*> q;
+        q.push(root);
 
-        int ans=-1;
-       for(int i=0;i<v.size();i++)
-       {
-        s+=v[i].second->val;
-        if(i==v.size()-1||v[i].first!=v[i+1].first)
-        { 
-            if(s>maxx)
-            {
-                ans=v[i].first;
-                maxx=s;
-               // cout<<v[i].first<<" ";
+        int level = 1;
+        int ans = 1;
+        long long maxsum = LLONG_MIN;
+
+        while (!q.empty()) {
+            int size = q.size();
+            long long currsum = 0;
+
+            for (int i = 0; i < size; i++) {
+                TreeNode* node = q.front();
+                q.pop();
+
+                currsum += node->val;
+
+                if (node->left) q.push(node->left);
+                if (node->right) q.push(node->right);
             }
-            s=0;
-           
+
+            if (currsum > maxsum) {
+                maxsum = currsum;
+                ans = level;
+            }
+
+            level++;
         }
-       
-        
-       }
-       if(s>maxx)
-       {
-        maxx=s;
-        ans=v[v.size()-1].first;
-       }
-      return ans;
-        
+
+        return ans;
     }
 };
