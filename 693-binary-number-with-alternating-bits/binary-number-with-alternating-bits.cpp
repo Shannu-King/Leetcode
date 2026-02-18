@@ -1,7 +1,20 @@
 class Solution {
 public:
     bool hasAlternatingBits(int n) {
-       unsigned int x=n^(n>>1);
-        return (x&(x+1)) ==0;
+        int c=n%2;
+        n=n/2;
+        while(n>0)
+        {
+            int k=n%2;
+            if(k==c)
+            return false;
+            else
+            {
+               
+                c=k;
+            }
+            n=n/2;
+        }
+        return true;
     }
 };
