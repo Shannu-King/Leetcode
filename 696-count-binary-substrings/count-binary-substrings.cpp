@@ -13,7 +13,7 @@ public:
            if(s[i]!=s[i-1])
            {
             c+=min(o,z);
-               cout<<c<<" ";
+               //cout<<c<<" ";
             if(s[i-1]=='0')
             o=0;
             else
