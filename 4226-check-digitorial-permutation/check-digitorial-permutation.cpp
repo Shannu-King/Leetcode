@@ -12,24 +12,25 @@ public:
         }
         long long temp=n;
         long long ans=0;
+        map<int,int>mp1;
+           map<int,int>mp2;
         while(n>0)
         {
             int k=n%10;
+            mp1[k]++;
             ans+=(mp[k]);
             //cout<<mp[k]<<" ";
             n=n/10;
          
         }
+        
         string kk=to_string(ans);
       string s=to_string(temp);
-   //  cout<<s<<" "<<kk<<" ";
+      sort(kk.begin(),kk.end());
       sort(s.begin(),s.end());
-      do
-      {
-        if(s==kk)
-        return true;
-      }while(next_permutation(s.begin(),s.end()));
-      return false;
+      return s==kk;
+      
+
       
     }
 };
