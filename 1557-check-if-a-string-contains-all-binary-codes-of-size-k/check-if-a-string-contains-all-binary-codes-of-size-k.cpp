@@ -10,8 +10,8 @@ public:
         
             string l=s.substr(i,i+k-c);
 
-            cout<<i<<" "<<i+k<<" ";
-            cout<<s.substr(i,i+k-c)<<" ";
+           // cout<<i<<" "<<i+k<<" ";
+            //cout<<s.substr(i,i+k-c)<<" ";
             st.insert(l);
             c++;
         }
