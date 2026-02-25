@@ -14,7 +14,7 @@ public:
             set.insert(l);
         }
         int res=pow(2,k);
-        return set.size()>=res;
+        return set.size()==res;
         
     }
 };
