@@ -4,8 +4,9 @@ public:
         vector<pair<int,int>>p;
         for(int i=0;i<arr.size();i++)
         {
-            int k=__builtin_popcount(arr[i]);
-            p.push_back({k,arr[i]});
+        int k=__builtin_popcount(arr[i]);
+        p.push_back({k,arr[i]});
+      //  cout<<k<<" ";
         }
         sort(p.begin(),p.end());
         vector<int>res;
@@ -14,5 +15,6 @@ public:
             res.push_back(p[i].second);
         }
         return res;
+        return {};
     }
 };
