@@ -1,16 +1,16 @@
 class MyHashSet {
 public:
-map<int,int>mp;
+unordered_set<int>mp;
     MyHashSet() {
         
     }
     
     void add(int key) {
-        mp[key]++;
+       mp.insert(key);
     }
     
     void remove(int key) {
-        if(mp.find(key)!=mp.end())
+       
         mp.erase(key);
     }
     
