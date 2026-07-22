@@ -19,7 +19,7 @@ public:
         }
         for(int i=0;i<nums.size();i++)
         {
-            cout<<nums[i]<<endl;
+         //   cout<<nums[i]<<endl;
             if(nums[i]!=i+1)
             return i+1;
         }
