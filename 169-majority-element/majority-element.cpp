@@ -2,7 +2,6 @@ class Solution {
 public:
     int majorityElement(vector<int>& nums) {
         int maxx=0;
-        int high=0;
         int start=nums[0];
         for(int i=0;i<nums.size();i++)
         {
@@ -11,7 +10,7 @@ public:
             maxx++;
            
            }
-           else if(start!=nums[i])
+           else 
            {
             maxx--;
             
