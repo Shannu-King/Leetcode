@@ -17,7 +17,7 @@ public:
            
             
         }
-        for(int i=s;i<=s+50;i++)
+        for(int i=s;i<=51;i++)
         {
             if(mp.find(i)==mp.end())
             return i;
