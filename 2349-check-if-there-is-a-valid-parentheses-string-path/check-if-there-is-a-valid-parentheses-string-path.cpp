@@ -18,7 +18,7 @@ public:
         if(grid[0][0] == -1)
         return false;
 
-      vector<vector<set<int>>> dp(n+1, vector<set<int>>(m+1));
+      vector<vector<unordered_set<int>>> dp(n+1, vector<unordered_set<int>>(m+1));
       dp[1][1].insert(grid[0][0]);
       for(int i = 0; i < n; ++i)
       {
