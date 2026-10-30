@@ -3,7 +3,12 @@ class Solution:
         map = {}
         for ch in s :
             map[ch] = map.get(ch, 0) + 1
-        map2 = {}
+       
         for ch in t:
-            map2[ch] = map2.get(ch, 0) + 1
-        return map == map2
+           if ch not in map:
+             return False
+           map[ch] -= 1
+           if map[ch] == 0 :
+            del map[ch]
+
+        return not map
